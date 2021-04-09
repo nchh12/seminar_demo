@@ -17,6 +17,7 @@
     },
     mounted() {
       console.log(this.$globalVar++)
+      this.$foo()
     }
   }
 </script>

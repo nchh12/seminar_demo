@@ -1,6 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
 
-App.config.globalProperties.$globalVar = 10
+app.config.globalProperties.$globalVar = 10
+
+app.config.globalProperties.$foo = () => {
+    app.config.globalProperties.$globalVar += 10
+    console.log("reached here")
+}
+
+app.mount("#app")
+
+
+
